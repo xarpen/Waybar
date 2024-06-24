@@ -102,7 +102,7 @@ bool AModule::handleMouseEnter(GdkEventCrossing* const& e) {
   }
 
   if (hasUserEvents_) {
-    setCursor(Gdk::HAND2);
+    // setCursor(Gdk::HAND2);
   }
   return false;
 }
