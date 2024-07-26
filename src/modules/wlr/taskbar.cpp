@@ -282,12 +282,17 @@ Task::Task(const waybar::Bar &bar, const Json::Value &config, Taskbar *tbar,
 
   button.set_relief(Gtk::RELIEF_NONE);
 
+  text_before_.set_ellipsize(Pango::EllipsizeMode::ELLIPSIZE_END);
+  text_after_.set_ellipsize(Pango::EllipsizeMode::ELLIPSIZE_END);
+
   content_.add(text_before_);
   content_.add(icon_);
   content_.add(text_after_);
 
   content_.show();
   button.add(content_);
+
+  button.set_size_request(140, -1);
 
   format_before_.clear();
   format_after_.clear();
